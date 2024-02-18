@@ -1,3 +1,30 @@
+@import './variables.scss';
+@import './mixins.scss';
+
 body {
-	background-color: rgb(198, 155, 155);
+	background-color: $main-background-color;
 }
+
+.carousel {
+	color: red;
+
+	&__subtitle {
+		color: $main-color;
+		font-size: $main-font-size;
+	}
+	&__link {
+		&--active {
+			color: greenyellow;
+			&:hover {
+				color: red;
+			}
+		}
+	}
+}
+.class1 {
+	@include wygladButton(100px, 55px, 22px);
+}
+.class2 {
+	@include wygladButton(50px, 35px, $main-font-size);
+}
+git statuss
